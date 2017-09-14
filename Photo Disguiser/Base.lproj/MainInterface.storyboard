@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo Editing View Controller-->
+        <scene sceneID="7MM-of-jgj">
+            <objects>
+                <viewController id="ObA-dk-sSI" customClass="PhotoEditingViewController" customModule="Photo_Disguiser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="w54-dF-ig9"/>
+                        <viewControllerLayoutGuide type="bottom" id="98X-aJ-ymR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zMn-AG-sqS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plu-gf-V6j">
+                                <rect key="frame" x="0.0" y="435" width="320" height="0.0"/>
+                                <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ea2-m7-6oz">
+                                <rect key="frame" x="19" y="444" width="116" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="2YU-pG-q6B"/>
+                                    <constraint firstAttribute="width" constant="116" id="e4W-1y-5yL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elf-Uy-aYP" customClass="BackgroundHighlightedButton" customModule="Photo_Disguiser" customModuleProvider="target">
+                                <rect key="frame" x="19" y="444" width="116" height="116"/>
+                                <color key="backgroundColor" red="0.097463774776585549" green="0.7352618481304446" blue="0.79525351524353027" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="ELQ-aq-SFk"/>
+                                    <constraint firstAttribute="width" constant="116" id="cTo-cu-qdO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.65175513698630139" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <state key="normal" title="Select Photo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
+                                        <color key="value" white="0.0" alpha="0.65175513699999998" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aHe-w7-PDv">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="436"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUR-Bk-3c4">
+                                <rect key="frame" x="185" y="444" width="116" height="116"/>
+                                <color key="backgroundColor" red="0.53032411353314968" green="0.79525351524353027" blue="0.38970426953405635" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="Btd-rf-Cdw"/>
+                                    <constraint firstAttribute="height" constant="116" id="lNB-Wd-6gg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Disguise">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HUR-Bk-3c4" firstAttribute="top" secondItem="Ea2-m7-6oz" secondAttribute="top" id="0IJ-8z-ZOp"/>
+                            <constraint firstItem="98X-aJ-ymR" firstAttribute="top" secondItem="HUR-Bk-3c4" secondAttribute="bottom" constant="8" symbolic="YES" id="4Wu-fP-ePr"/>
+                            <constraint firstItem="HUR-Bk-3c4" firstAttribute="top" secondItem="aHe-w7-PDv" secondAttribute="bottom" constant="8" id="71n-fq-OE3"/>
+                            <constraint firstItem="Elf-Uy-aYP" firstAttribute="top" secondItem="aHe-w7-PDv" secondAttribute="bottom" constant="8" id="9zq-fR-7sO"/>
+                            <constraint firstAttribute="trailing" secondItem="plu-gf-V6j" secondAttribute="trailing" id="ESn-5V-SfA"/>
+                            <constraint firstItem="aHe-w7-PDv" firstAttribute="top" secondItem="zMn-AG-sqS" secondAttribute="top" id="MhM-Rn-sHa"/>
+                            <constraint firstItem="Ea2-m7-6oz" firstAttribute="top" secondItem="aHe-w7-PDv" secondAttribute="bottom" constant="8" id="SGp-yI-tiT"/>
+                            <constraint firstItem="HUR-Bk-3c4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" constant="169" id="UQm-xJ-Af0"/>
+                            <constraint firstItem="Ea2-m7-6oz" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" constant="3" id="WVn-BQ-eub"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Elf-Uy-aYP" secondAttribute="trailing" constant="169" id="YbT-Lx-syq"/>
+                            <constraint firstItem="plu-gf-V6j" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="bhO-aY-ikI"/>
+                            <constraint firstItem="plu-gf-V6j" firstAttribute="top" secondItem="w54-dF-ig9" secondAttribute="bottom" constant="415" id="dk5-cz-hrj"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Ea2-m7-6oz" secondAttribute="trailing" constant="169" id="gTy-xt-oA1"/>
+                            <constraint firstItem="HUR-Bk-3c4" firstAttribute="baseline" secondItem="Elf-Uy-aYP" secondAttribute="baseline" id="h6l-PU-tFC"/>
+                            <constraint firstItem="aHe-w7-PDv" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leading" id="hz9-ec-cz2"/>
+                            <constraint firstAttribute="trailing" secondItem="aHe-w7-PDv" secondAttribute="trailing" id="kfo-Bn-yNv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="HUR-Bk-3c4" secondAttribute="trailing" constant="3" id="psA-oS-i8F"/>
+                            <constraint firstItem="HUR-Bk-3c4" firstAttribute="top" secondItem="Elf-Uy-aYP" secondAttribute="top" id="vmn-Ax-WFg"/>
+                            <constraint firstItem="Elf-Uy-aYP" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" constant="3" id="xAa-ze-Y6E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="disguiseBtn" destination="HUR-Bk-3c4" id="dHe-b6-z4U"/>
+                        <outlet property="mainImageView" destination="aHe-w7-PDv" id="oH4-jS-TCS"/>
+                        <outlet property="selectBtn" destination="Elf-Uy-aYP" id="MvV-Pk-oLu"/>
+                        <outlet property="selectedImageView" destination="Ea2-m7-6oz" id="T1s-jt-7q5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="43.125" y="57.04225352112676"/>
+        </scene>
+    </scenes>
+</document>

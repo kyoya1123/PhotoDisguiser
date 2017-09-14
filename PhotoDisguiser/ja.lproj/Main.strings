@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "元の画像に戻す時は\"元に戻す\"ボタンをタップ"; ObjectID = "235-cs-bGE"; */
+"235-cs-bGE.text" = "元の画像に戻す時は\"元に戻す\"ボタンをタップ";
+
+/* Class = "UILabel"; text = "\"Disguise\"ボタンをタップし、Doneをタップ"; ObjectID = "2YK-Tq-yRU"; */
+"2YK-Tq-yRU.text" = "\"Disguise\"ボタンをタップし、Doneをタップ";
+
+/* Class = "UILabel"; text = "右下のチェックボタンをタップして完了"; ObjectID = "4D6-hW-g7q"; */
+"4D6-hW-g7q.text" = "右下のチェックボタンをタップして完了";
+
+/* Class = "UIButton"; normalTitle = "ガイド"; ObjectID = "4w5-hb-FTk"; */
+"4w5-hb-FTk.normalTitle" = "ガイド";
+
+/* Class = "UILabel"; text = "このアプリは\"写真\"アプリ内でのみ使用できます"; ObjectID = "9f7-xe-EAi"; */
+"9f7-xe-EAi.text" = "このアプリは\"写真\"アプリ内でのみ使用できます";
+
+/* Class = "UILabel"; text = "\"Select Photo\"ボタンをタップ、偽装に使う写真を選ぶ"; ObjectID = "FlM-Cl-jzQ"; */
+"FlM-Cl-jzQ.text" = "\"Select Photo\"ボタンをタップ、偽装に使う写真を選ぶ";
+
+/* Class = "UILabel"; text = "偽装したい写真を選び、編集ボタンをタップ"; ObjectID = "VPe-eB-xTh"; */
+"VPe-eB-xTh.text" = "偽装したい写真を選び、編集ボタンをタップ";
+
+/* Class = "UILabel"; text = "3点をタップ、\"Photo Disguiser\"を選択"; ObjectID = "uHo-vH-CAp"; */
+"uHo-vH-CAp.text" = "赤で囲ったボタンをタップ、\"その他\"から\"Photo Disguiser\"を選択";
