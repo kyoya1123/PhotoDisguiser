@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,248 +16,307 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="zAD-f9-44s" customClass="PageViewController" customModule="PhotoDisguiser" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="90d-lg-4fY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114.2578125" y="144.90222711267603"/>
+            <point key="canvasLocation" x="-70" y="144"/>
         </scene>
         <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="FirstViewController" customModule="PhotoDisguiser" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IVO-nE-HFy"/>
+                        <viewControllerLayoutGuide type="bottom" id="lCf-a3-XoC"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_20170226170625" id="khV-J0-oDu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app can be used only inside &quot;Photo&quot; app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9f7-xe-EAi">
-                                <rect key="frame" x="25" y="86" width="271" height="198"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4w5-hb-FTk">
-                                <rect key="frame" x="95" y="349" width="130" height="130"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4w5-hb-FTk">
+                                <rect key="frame" x="90" y="348" width="140" height="140"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="MlK-8S-PzE"/>
+                                    <constraint firstAttribute="height" constant="140" id="yMk-EG-4pP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="23"/>
                                 <state key="normal" title="Guide">
                                     <color key="titleColor" red="1" green="0.53045744294455188" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="65"/>
+                                        <integer key="value" value="70"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="zAD-f9-44s" kind="modal" modalTransitionStyle="crossDissolve" id="dhu-Jc-hHg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app can be used only inside &quot;Photo&quot; app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9f7-xe-EAi">
+                                <rect key="frame" x="25" y="135" width="271" height="42"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.097463774779999998" green="0.73526184809999995" blue="0.79525351519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4w5-hb-FTk" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="348" id="CNT-0A-6zw"/>
+                            <constraint firstItem="9f7-xe-EAi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="MJQ-xg-xZt"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="4w5-hb-FTk" secondAttribute="trailing" constant="74" id="YFE-46-yAW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9f7-xe-EAi" secondAttribute="trailing" constant="8" id="h3K-h7-IVv"/>
+                            <constraint firstItem="9f7-xe-EAi" firstAttribute="top" secondItem="IVO-nE-HFy" secondAttribute="bottom" constant="115" id="hxr-BP-rdC"/>
+                            <constraint firstItem="4w5-hb-FTk" firstAttribute="centerX" secondItem="9f7-xe-EAi" secondAttribute="centerX" id="neA-GD-Uu3"/>
+                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="4w5-hb-FTk" secondAttribute="bottom" constant="80" id="nj4-2R-huQ"/>
+                            <constraint firstItem="4w5-hb-FTk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="74" id="z76-ui-22X"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-475.341796875" y="144.90222711267603"/>
+            <point key="canvasLocation" x="-476" y="144"/>
         </scene>
-        <!--Second View Controller-->
+        <!--View Controller-->
         <scene sceneID="JXv-8m-LX6">
             <objects>
-                <viewController storyboardIdentifier="SecondViewController" id="iwt-HJ-I7f" customClass="SecondViewController" customModule="PhotoDisguiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Second" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iwt-HJ-I7f" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cq3-Mh-ufM"/>
+                        <viewControllerLayoutGuide type="bottom" id="mTf-px-hHv"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qUe-jc-dkf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_20170226170625" id="6sy-oB-9aA">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot 2017.02.26 18.08.17" id="9Y0-u9-x5q">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image1" translatesAutoresizingMaskIntoConstraints="NO" id="9Y0-u9-x5q">
                                 <rect key="frame" x="28" y="92" width="266" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick the photo you want to disguise and tap the Edit button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VPe-eB-xTh">
-                                <rect key="frame" x="0.0" y="28" width="320" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a photo you want to disguise and tap the Edit button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPe-eB-xTh">
+                                <rect key="frame" x="5" y="39" width="311" height="38"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.097463774779999998" green="0.73526184809999995" blue="0.79525351519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="9Y0-u9-x5q" secondAttribute="trailing" constant="10" id="AER-Sp-X4b"/>
+                            <constraint firstItem="mTf-px-hHv" firstAttribute="top" secondItem="9Y0-u9-x5q" secondAttribute="bottom" id="Brq-Js-tIV"/>
+                            <constraint firstAttribute="trailing" secondItem="VPe-eB-xTh" secondAttribute="trailing" constant="4" id="EYj-x7-Gdd"/>
+                            <constraint firstItem="9Y0-u9-x5q" firstAttribute="leading" secondItem="qUe-jc-dkf" secondAttribute="leadingMargin" constant="12" id="NdF-QF-j5B"/>
+                            <constraint firstItem="9Y0-u9-x5q" firstAttribute="top" secondItem="VPe-eB-xTh" secondAttribute="bottom" constant="15" id="Qnk-kt-e08"/>
+                            <constraint firstItem="VPe-eB-xTh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="qUe-jc-dkf" secondAttribute="top" constant="28" id="X3y-WU-Ihw"/>
+                            <constraint firstItem="VPe-eB-xTh" firstAttribute="leading" secondItem="qUe-jc-dkf" secondAttribute="leading" constant="5" id="lRA-JZ-OY8"/>
+                            <constraint firstItem="9Y0-u9-x5q" firstAttribute="top" secondItem="qUe-jc-dkf" secondAttribute="topMargin" constant="92" id="zLS-iY-4nY"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMZ-q9-xdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="609.375" y="144.43838028169014"/>
+            <point key="canvasLocation" x="353" y="144"/>
         </scene>
-        <!--Third View Controller-->
+        <!--View Controller-->
         <scene sceneID="xhN-8G-Bb9">
             <objects>
-                <viewController storyboardIdentifier="ThirdViewController" id="FAB-JQ-akh" customClass="ThirdViewController" customModule="PhotoDisguiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Third" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FAB-JQ-akh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EsN-B0-ZVp"/>
+                        <viewControllerLayoutGuide type="bottom" id="yhK-xt-tif"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QiH-sQ-Vyw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_20170226170625" id="Eur-Rn-laI">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot 2017.03.23 9.27.01" id="s1e-Ig-DCz">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image2" translatesAutoresizingMaskIntoConstraints="NO" id="s1e-Ig-DCz">
                                 <rect key="frame" x="27" y="92" width="266" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap the marked area, tap &quot;More&quot; and select &quot;PhotoDisguiser&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uHo-vH-CAp">
-                                <rect key="frame" x="27" y="20" width="266" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap the marked area, then tap &quot;More&quot; and select &quot;PhotoDisguiser&quot;" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uHo-vH-CAp">
+                                <rect key="frame" x="27" y="27" width="266" height="57"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.097463774779999998" green="0.73526184809999995" blue="0.79525351519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="s1e-Ig-DCz" secondAttribute="trailing" constant="11" id="5de-DC-FRd"/>
+                            <constraint firstItem="s1e-Ig-DCz" firstAttribute="top" secondItem="QiH-sQ-Vyw" secondAttribute="topMargin" constant="92" id="KgW-uL-ZIK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uHo-vH-CAp" secondAttribute="trailing" constant="11" id="Nrn-79-Cfq"/>
+                            <constraint firstItem="yhK-xt-tif" firstAttribute="top" secondItem="s1e-Ig-DCz" secondAttribute="bottom" id="a0F-zG-JL3"/>
+                            <constraint firstItem="s1e-Ig-DCz" firstAttribute="leading" secondItem="QiH-sQ-Vyw" secondAttribute="leadingMargin" constant="11" id="fVR-Qv-PMT"/>
+                            <constraint firstItem="uHo-vH-CAp" firstAttribute="top" relation="greaterThanOrEqual" secondItem="QiH-sQ-Vyw" secondAttribute="topMargin" constant="16" id="qto-2z-Xtc"/>
+                            <constraint firstItem="uHo-vH-CAp" firstAttribute="leading" secondItem="QiH-sQ-Vyw" secondAttribute="leadingMargin" constant="11" id="vNR-bv-gg4"/>
+                            <constraint firstItem="s1e-Ig-DCz" firstAttribute="top" secondItem="uHo-vH-CAp" secondAttribute="bottom" constant="8" id="xEE-0H-0bt"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13Q-6h-A5U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128" y="144"/>
+            <point key="canvasLocation" x="746" y="144"/>
         </scene>
-        <!--Fourth View Controller-->
+        <!--View Controller-->
         <scene sceneID="3Gz-Y3-SeU">
             <objects>
-                <viewController storyboardIdentifier="FourthViewController" id="uLD-jb-DOb" customClass="FourthViewController" customModule="PhotoDisguiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fourth" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uLD-jb-DOb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E6K-aI-Zme"/>
+                        <viewControllerLayoutGuide type="bottom" id="Cvg-Pk-D2f"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LcO-Un-7Nq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_20170226170625" id="gNe-tH-ezN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot 2017.02.26 20.52.38" id="a3m-3N-EZn">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image3" translatesAutoresizingMaskIntoConstraints="NO" id="a3m-3N-EZn">
                                 <rect key="frame" x="27" y="92" width="266" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap “Select Photo”, choose the photo to disguise." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FlM-Cl-jzQ">
-                                <rect key="frame" x="16" y="29" width="288" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &quot;Select Photo&quot;, choose a photo to disguise." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlM-Cl-jzQ">
+                                <rect key="frame" x="16" y="32" width="288" height="38"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.097463774779999998" green="0.73526184809999995" blue="0.79525351519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="a3m-3N-EZn" firstAttribute="leading" secondItem="LcO-Un-7Nq" secondAttribute="leadingMargin" constant="11" id="A6g-ZW-o9K"/>
+                            <constraint firstItem="FlM-Cl-jzQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="LcO-Un-7Nq" secondAttribute="topMargin" constant="32" id="EJ7-bH-eN4"/>
+                            <constraint firstItem="a3m-3N-EZn" firstAttribute="top" secondItem="LcO-Un-7Nq" secondAttribute="topMargin" constant="92" id="KW8-ok-9Ve"/>
+                            <constraint firstItem="Cvg-Pk-D2f" firstAttribute="top" secondItem="a3m-3N-EZn" secondAttribute="bottom" id="QlR-9O-wzk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="a3m-3N-EZn" secondAttribute="trailing" constant="11" id="R4v-cC-haW"/>
+                            <constraint firstItem="a3m-3N-EZn" firstAttribute="top" secondItem="FlM-Cl-jzQ" secondAttribute="bottom" constant="22" id="YTY-ku-Wwf"/>
+                            <constraint firstItem="FlM-Cl-jzQ" firstAttribute="trailing" secondItem="LcO-Un-7Nq" secondAttribute="trailingMargin" id="YxC-eq-rh0"/>
+                            <constraint firstItem="FlM-Cl-jzQ" firstAttribute="leading" secondItem="LcO-Un-7Nq" secondAttribute="leadingMargin" id="ugd-6p-6gH"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l0k-1G-iOc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1652.34375" y="144.43838028169014"/>
+            <point key="canvasLocation" x="1158" y="144"/>
         </scene>
-        <!--Fifth View Controller-->
+        <!--View Controller-->
         <scene sceneID="8ZG-di-KxF">
             <objects>
-                <viewController storyboardIdentifier="FifthViewController" id="crF-A4-KOK" customClass="FifthViewController" customModule="PhotoDisguiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Fifth" useStoryboardIdentifierAsRestorationIdentifier="YES" id="crF-A4-KOK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HjX-Oy-ojT"/>
+                        <viewControllerLayoutGuide type="bottom" id="jQ4-Pb-hqz"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pOb-H3-IHo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_20170226170625" id="egB-z6-qDC">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot 2017.02.26 20.57.31" id="66j-d8-4ga">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image4" translatesAutoresizingMaskIntoConstraints="NO" id="66j-d8-4ga">
                                 <rect key="frame" x="27" y="92" width="266" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &quot;Disguise&quot; button, tap &quot;Done&quot;." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2YK-Tq-yRU">
-                                <rect key="frame" x="28" y="28" width="265" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &quot;Disguise&quot; and &quot;Done&quot;." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YK-Tq-yRU">
+                                <rect key="frame" x="16" y="28" width="288" height="49"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.097463774779999998" green="0.73526184809999995" blue="0.79525351519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="66j-d8-4ga" firstAttribute="top" secondItem="2YK-Tq-yRU" secondAttribute="bottom" constant="15" id="6QN-dK-lYt"/>
+                            <constraint firstItem="66j-d8-4ga" firstAttribute="top" secondItem="pOb-H3-IHo" secondAttribute="topMargin" constant="92" id="VJ8-gC-CKV"/>
+                            <constraint firstItem="2YK-Tq-yRU" firstAttribute="top" secondItem="pOb-H3-IHo" secondAttribute="topMargin" constant="28" id="Vfp-aU-bJT"/>
+                            <constraint firstItem="2YK-Tq-yRU" firstAttribute="leading" secondItem="pOb-H3-IHo" secondAttribute="leadingMargin" id="a6U-SY-JBa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2YK-Tq-yRU" secondAttribute="trailing" id="nGs-no-yQE"/>
+                            <constraint firstItem="66j-d8-4ga" firstAttribute="leading" secondItem="pOb-H3-IHo" secondAttribute="leadingMargin" constant="11" id="uml-wZ-Qlb"/>
+                            <constraint firstItem="jQ4-Pb-hqz" firstAttribute="top" secondItem="66j-d8-4ga" secondAttribute="bottom" id="upJ-c6-rqG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="66j-d8-4ga" secondAttribute="trailing" constant="11" id="xcj-RS-buh"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S3g-2B-xkF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2215.118408203125" y="144.79190946736756"/>
+            <point key="canvasLocation" x="1598" y="144"/>
         </scene>
-        <!--Sixth View Controller-->
+        <!--View Controller-->
         <scene sceneID="g0O-JB-rnE">
             <objects>
-                <viewController storyboardIdentifier="SixthViewController" id="r1p-XJ-Geb" customClass="SixthViewController" customModule="PhotoDisguiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Sixth" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r1p-XJ-Geb" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="W98-LV-eZf"/>
+                        <viewControllerLayoutGuide type="bottom" id="PLZ-f5-J9J"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Do8-cm-kqk">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_20170226170625" id="je6-Lc-VJF">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot 2017.02.26 21.18.41" id="jOc-rb-q1g">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image5" translatesAutoresizingMaskIntoConstraints="NO" id="jOc-rb-q1g">
                                 <rect key="frame" x="27" y="92" width="266" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap &quot;check&quot; button on the lower right." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4D6-hW-g7q">
-                                <rect key="frame" x="58" y="28" width="205" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap check button." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4D6-hW-g7q">
+                                <rect key="frame" x="16" y="28" width="288" height="52"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.097463774779999998" green="0.73526184809999995" blue="0.79525351519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jOc-rb-q1g" firstAttribute="top" secondItem="Do8-cm-kqk" secondAttribute="topMargin" constant="92" id="4au-Wf-m73"/>
+                            <constraint firstItem="jOc-rb-q1g" firstAttribute="leading" secondItem="Do8-cm-kqk" secondAttribute="leadingMargin" constant="11" id="AKR-Sv-UUN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jOc-rb-q1g" secondAttribute="trailing" constant="11" id="PBc-CV-vgo"/>
+                            <constraint firstItem="4D6-hW-g7q" firstAttribute="trailing" secondItem="Do8-cm-kqk" secondAttribute="trailingMargin" id="Udj-oH-9qQ"/>
+                            <constraint firstItem="PLZ-f5-J9J" firstAttribute="top" secondItem="jOc-rb-q1g" secondAttribute="bottom" id="by2-Pz-X3Q"/>
+                            <constraint firstItem="4D6-hW-g7q" firstAttribute="leading" secondItem="Do8-cm-kqk" secondAttribute="leadingMargin" id="h5T-3Z-5g3"/>
+                            <constraint firstItem="jOc-rb-q1g" firstAttribute="top" secondItem="4D6-hW-g7q" secondAttribute="bottom" constant="12" id="hqm-eC-k4i"/>
+                            <constraint firstItem="4D6-hW-g7q" firstAttribute="top" secondItem="Do8-cm-kqk" secondAttribute="topMargin" constant="28" id="vLO-c9-7mZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNc-79-ulK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2815.24658203125" y="144.79190946736756"/>
+            <point key="canvasLocation" x="2015" y="144"/>
         </scene>
-        <!--Seventh View Controller-->
+        <!--View Controller-->
         <scene sceneID="EWf-O4-PXx">
             <objects>
-                <viewController storyboardIdentifier="SeventhViewController" id="nUk-wf-fke" customClass="SeventhViewController" customModule="PhotoDisguiser" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Seventh" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nUk-wf-fke" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l8P-4k-e5i"/>
+                        <viewControllerLayoutGuide type="bottom" id="X9N-3n-gWq"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uLe-Q0-u8W">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_20170226170625" id="ipW-RQ-Whx">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Simulator Screen Shot 2017.02.26 21.24.32" id="3H6-Ac-E0r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image6" translatesAutoresizingMaskIntoConstraints="NO" id="3H6-Ac-E0r">
                                 <rect key="frame" x="27" y="92" width="266" height="476"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you want to revert to original, tap &quot;Revert&quot;." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="235-cs-bGE">
-                                <rect key="frame" x="30" y="28" width="260" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When you want to revert to original, tap &quot;Revert&quot;." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="235-cs-bGE">
+                                <rect key="frame" x="30" y="28" width="260" height="38"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="19"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.097463774779999998" green="0.73526184809999995" blue="0.79525351519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3H6-Ac-E0r" firstAttribute="top" secondItem="uLe-Q0-u8W" secondAttribute="topMargin" constant="92" id="ByZ-gl-fJH"/>
+                            <constraint firstItem="3H6-Ac-E0r" firstAttribute="top" secondItem="235-cs-bGE" secondAttribute="bottom" constant="26" id="FvG-73-yfu"/>
+                            <constraint firstItem="235-cs-bGE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uLe-Q0-u8W" secondAttribute="topMargin" constant="28" id="Jns-gn-wB4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="235-cs-bGE" secondAttribute="trailing" constant="14" id="SM5-3H-6om"/>
+                            <constraint firstItem="235-cs-bGE" firstAttribute="leading" secondItem="uLe-Q0-u8W" secondAttribute="leadingMargin" constant="14" id="SR9-33-g6Q"/>
+                            <constraint firstItem="X9N-3n-gWq" firstAttribute="top" secondItem="3H6-Ac-E0r" secondAttribute="bottom" id="arD-oC-C15"/>
+                            <constraint firstItem="3H6-Ac-E0r" firstAttribute="leading" secondItem="uLe-Q0-u8W" secondAttribute="leadingMargin" constant="11" id="l49-NZ-VNr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3H6-Ac-E0r" secondAttribute="trailing" constant="11" id="mRi-pH-g4h"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kkG-gb-HU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3322.265625" y="144.43838028169014"/>
+            <point key="canvasLocation" x="2413" y="144"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Simulator Screen Shot 2017.02.26 18.08.17" width="640" height="1136"/>
-        <image name="Simulator Screen Shot 2017.02.26 20.52.38" width="640" height="1136"/>
-        <image name="Simulator Screen Shot 2017.02.26 20.57.31" width="640" height="1136"/>
-        <image name="Simulator Screen Shot 2017.02.26 21.18.41" width="640" height="1136"/>
-        <image name="Simulator Screen Shot 2017.02.26 21.24.32" width="640" height="1136"/>
-        <image name="Simulator Screen Shot 2017.03.23 9.27.01" width="640" height="1136"/>
-        <image name="image_20170226170625" width="320" height="568"/>
+        <image name="image1" width="640" height="1136"/>
+        <image name="image2" width="640" height="1136"/>
+        <image name="image3" width="640" height="1136"/>
+        <image name="image4" width="640" height="1136"/>
+        <image name="image5" width="640" height="1136"/>
+        <image name="image6" width="640" height="1136"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

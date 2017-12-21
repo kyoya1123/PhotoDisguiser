@@ -10,7 +10,7 @@ class PhotoEditingViewController: UIViewController {
     
     @IBOutlet var mainImageView: UIImageView!
     @IBOutlet var selectedImageView: UIImageView!
-    @IBOutlet var selectBtn: UIButton!
+    @IBOutlet var selectBtn: BackgroundHighlightedButton!
     @IBOutlet var disguiseBtn: UIButton!
     
     override func viewDidLoad() {
@@ -26,7 +26,6 @@ fileprivate extension PhotoEditingViewController {
         selectBtn.layer.cornerRadius = selectBtn.frame.size.height / 2
         selectBtn.layer.masksToBounds = true
         selectBtn.isExclusiveTouch = true
-        selectBtn.imageView?.contentMode = .scaleAspectFill
         selectBtn.addTarget(self, action: #selector(didTapSelect), for: .touchUpInside)
         disguiseBtn.layer.cornerRadius = disguiseBtn.frame.size.height / 2
         disguiseBtn.layer.masksToBounds = true
@@ -39,7 +38,7 @@ fileprivate extension PhotoEditingViewController {
         if let imageData = save.data(forKey: "image") {
             let image = UIImage(data: imageData)
             selectedImageView.image = image
-            selectBtn.setTitle("", for: .normal)
+            selectBtn.setTitle(nil, for: .normal)
             selectBtn.backgroundColor = .clear
         } else {
             disguiseBtn.backgroundColor = .gray
@@ -47,11 +46,28 @@ fileprivate extension PhotoEditingViewController {
         }
     }
     
+    
+    @objc func didTapDisguise() {
+        displayedImage = selectedImageView.image
+        mainImageView.image = displayedImage
+        disguiseBtn.isEnabled = false
+        disguiseBtn.backgroundColor = .gray
+    }
+    
+    @objc func didTapSelect() {
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = .photoLibrary
+            present(controller, animated: true, completion: nil)
+        }
+    }
+    
     func resizeImage(_ image: UIImage) -> UIImage {
         var resultImage = image
         var width = image.size.width
         var height = image.size.height
-        var base: CGFloat = 0
+        var base: CGFloat!
         if width > 500 && height > 500 {
             if width > height || width == height {
                 base = 500 / width
@@ -70,22 +86,6 @@ fileprivate extension PhotoEditingViewController {
         }
         return resultImage
     }
-    
-    @objc func didTapDisguise() {
-        displayedImage = selectedImageView.image
-        mainImageView.image = displayedImage
-        disguiseBtn.isEnabled = false
-        disguiseBtn.backgroundColor = .gray
-    }
-    
-    @objc func didTapSelect() {
-        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
-            let controller = UIImagePickerController()
-            controller.delegate = self
-            controller.sourceType = .photoLibrary
-            present(controller, animated: true, completion: nil)
-        }
-    }
 }
 
 extension PhotoEditingViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
@@ -94,7 +94,7 @@ extension PhotoEditingViewController: UIImagePickerControllerDelegate,UINavigati
         guard let image = info[UIImagePickerControllerOriginalImage] as? UIImage else { return }
         selectedImageView.image = image
         selectBtn.backgroundColor = .clear
-        selectBtn.setTitle("", for: .normal)
+        selectBtn.setTitle(nil, for: .normal)
         let data = UIImageJPEGRepresentation(image, 1)
         save.set(data, forKey: "image")
         picker.dismiss(animated: true, completion: nil)

@@ -50,7 +50,7 @@
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="highlightedBackgroundColor">
-                                        <color key="value" white="0.0" alpha="0.65175513699999998" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="0.65063142123287676" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
